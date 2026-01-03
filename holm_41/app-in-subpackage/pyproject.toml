@@ -1,0 +1,13 @@
+[project]
+name = "app-in-subpackage"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "holm>=0.7.2",
+    "poethepoet>=0.38.0",
+    "uvicorn>=0.40.0",
+]
+
+[tool.poe.tasks]
+start = "uvicorn my_app.main:app --reload"
